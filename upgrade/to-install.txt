@@ -2,3 +2,4 @@ awesome-git
 pacaur
 lxterminal
 web-greeter
+plymouth-git
