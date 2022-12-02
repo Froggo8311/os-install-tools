@@ -3,7 +3,7 @@ mkdir /tmp/CarbonixInstall
 
 echo "Installing necessary components..."
 # Install Pacaur
-pacman -Sy --noconfirm --needed archlinux-keyring
+pacman -Syu --noconfirm --needed archlinux-keyring
 clear
 pacman -S --noconfirm --needed sudo fakeroot expac jq meson fakechroot gtest patch make libunistring
 mkdir /tmp/CarbonixInstall/pa-install
