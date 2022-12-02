@@ -3,3 +3,7 @@ pacaur
 lxterminal
 web-greeter
 plymouth-git
+playerctl
+xorg-xbacklight
+web-greeter
+rofi
