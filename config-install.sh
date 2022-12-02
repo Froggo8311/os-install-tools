@@ -3,8 +3,8 @@ sudo mkdir /tmp/CarbonixInstall
 
 echo "Installing window manager config..."
 # Awesome WM Config
-sudo mv /usr/share/awesome/themes/default /usr/share/awesome/themes/awesome
-sudo git clone https://github.com/Carbonix-Dev/config-awesome /usr/share/awesome/themes/default
+sudo git clone https://github.com/Carbonix-Dev/config-awesome /usr/share/awesome/themes/carbonix
+sudo git clone https://github.com/Carbonix-Dev/bling /usr/share/awesome/themes/carbonix/modules/bling
 clear
 
 echo "Setting up home directories..."
@@ -17,6 +17,8 @@ sudo mkdir /etc/skel/AppData/Local/share
 sudo mkdir /etc/skel/AppData/Local/share/config
 sudo mkdir /etc/skel/AppData/Local/var
 sudo mkdir /etc/skel/AppData/Roaming
+
+sudo ln -s /usr/share/awesome/themes/carbonix /etc/skel/.config/awesome
 sudo sh -c "echo 'exec awesome' > /etc/skel/.xinitrc"
 
 echo "Installing zsh config..."
