@@ -1,5 +1,24 @@
 #!/bin/bash
-sudo mkdir /tmp/CarbonixInstall
+mkdir /tmp/CarbonixInstall
+
+echo "Installing necessary components..."
+# Install Pacaur
+pacman -Sy --noconfirm --needed archlinux-keyring
+clear
+pacman -S --noconfirm --needed sudo fakeroot expac jq meson fakechroot gtest patch make libunistring
+mkdir /tmp/CarbonixInstall/pa-install
+cd /tmp/Carbonix/Install/pa-install
+wget https://aur.archlinux.org/cgit/aur.git/snapshot/pacaur.tar.gz
+wget https://aur.archlinux.org/cgit/aur.git/snapshot/auracle-git.tar.gz
+tar -xf pacaur.tar.gz
+tar -xf auracle-git.tar.xf
+chmod -R 777 /tmp/CarbonixInstall/pa-install
+cd auracle-git
+sudo -u nobody makepkg
+pacman -U --noconfirm auracle-git-*.pkg.tar.zst
+cd ../pacaur
+sudo -u nobody makepkg
+pacman -U --noconfirm pacaur-*.pkg.tar.zst
 
 echo "Installing window manager config..."
 # Awesome WM Config
