@@ -7,7 +7,7 @@ pacman -Syu --noconfirm --needed archlinux-keyring
 clear
 pacman -S --noconfirm --needed sudo fakeroot expac jq meson fakechroot gtest patch make libunistring
 mkdir /tmp/CarbonixInstall/pa-install
-cd /tmp/Carbonix/Install/pa-install
+cd /tmp/CarbonixInstall/pa-install
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/pacaur.tar.gz
 wget https://aur.archlinux.org/cgit/aur.git/snapshot/auracle-git.tar.gz
 tar -xf pacaur.tar.gz
