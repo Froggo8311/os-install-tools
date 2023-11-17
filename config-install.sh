@@ -56,6 +56,12 @@ sudo sed -i 's/HOME="${HOME:-$(eval echo ~$USER)}"/HOME="\/etc\/skel"/g' /tmp/Ca
 sudo sh -c "ZSH=/etc/skel/AppData/Local/share/oh-my-zsh KEEP_ZSHRC=no zsh /tmp/CarbonixInstall/zsh/omz.sh --unattended"
 clear
 
+# ZSH Autosuggestions
+sudo git clone https://github.com/zsh-users/zsh-autosuggestions /etc/skel/AppData/Local/share/oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
+# ZSH Syntax Highlighting
+sudo git clone https://github.com/zsh-users/zsh-syntax-highlighting /etc/skel/AppData/Local/share/oh-my-zsh/custom/plugins/zsh-syntax-highlighting
+
 # ZSHRC
 sudo git clone https://github.com/Carbonix-Dev/config-zsh /tmp/CarbonixInstall/zsh
 clear
